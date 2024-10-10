@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import CountUp from "react-countup";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
