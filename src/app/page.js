@@ -1,101 +1,128 @@
+"use client";
 import Image from "next/image";
-
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import CountUp from "react-countup";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="  bg-[#1b1d20] py-52 md:h-full md:w-screen">
+      {/* Upper */}
+      <div className="flex md:flex-row p-6  text-center md:text-left  flex-col md:ml-20 md:mr-11 gap-7 ">
+        <div>
+          {/* Text */}
+          <img
+            src="/assets/images/iwan_text.png"
+            className=" md:w-[22.313rem] md:p-6 w-auto md:mr-36 h-[20.5rem] pt-6 "
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        <div className="text-white md:w-[39.875rem]   font-poppins text-xl pt-16">
+          <p>
+            Inspired by iconic architecture that embodies elegance and beauty,
+            IWAN Design House was founded to enrich society through artistry.
+            With 100+ projects across Egypt, Saudi Arabia, Kuwait, Qatar,
+            Lebanon, Bahrain, UAE, and Germany, we offer comprehensive solutions
+            in interior design, architecture, urban planning, landscape design,
+            and fit-outs.
+          </p>
+
+          {/*  numbers */}
+          <div className="flex md:flex-row flex-col gap-20 pt-[4.5rem]">
+            <div>
+              <p className="font-bold text-6xl">
+                <CountUp end={400} duration={4} />
+                <span className="text-[#FFD400] ">+</span>
+              </p>
+
+              <p className="whitespace-nowrap text-[#AEAEAE] text-xl font-bold">
+                Client
+              </p>
+            </div>
+
+            <div>
+              <p className="font-bold text-6xl">
+                <CountUp end={2} duration={4} />k
+                <span className="text-[#FFD400]">+</span>
+              </p>
+              <p className="whitespace-nowrap font-bold text-[#AEAEAE] text-xl">
+                Product
+              </p>
+            </div>
+
+            <div>
+              <p className="font-bold text-6xl">
+                <CountUp end={12} duration={4} />
+                <span className="text-[#FFD400]">+</span>
+              </p>
+              <p className="whitespace-nowrap font-bold text-[#AEAEAE] text-xl">
+                Year Experience
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* image */}
+        <div>
+          <img
+            src="/assets/images/interior_1.png"
+            className="text-white w-full h-full size-[32.75rem] relative"
           />
-          Learn
-        </a>
+        </div>
+      </div>
+
+      {/* middle */}
+      <div className="flex md:flex-row flex-col p-6  gap-14 md:ml-28 mt-3">
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/assets/Portfolio.pdf"
+          download
+          className="btn rounded-full p-6 content-center font-extrabold bg-[#FFD400] hover:bg-[#b39c29] "
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          Portfolio <FileDownloadIcon />
         </a>
+
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/assets/company_portfolio.pdf"
+          download
+          className="btn rounded-full p-6 content-center font-extrabold bg-[#FFD400] hover:bg-[#b39c29] "
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+          Company Portfolio <FileDownloadIcon />
         </a>
-      </footer>
+      </div>
+
+      {/* Lower */}
+      <div className="flex md:flex-row flex-col p-6 md:p-0">
+        {/* first */}
+        <div>
+          <img src="/assets/images/vector.png" />
+        </div>
+
+        <div>
+          {" "}
+          <div className="text-white md:w-[39.875rem]   font-poppins text-xl pt-16">
+            <p>
+              IWAN Interior Design House specializes in creating exceptional
+              interiors, fit-outs, and decorative solutions. We blend creativity
+              with functionality to transform spaces into elegant environments
+              that reflect our clients' vision and style.
+            </p>
+          </div>
+        </div>
+        <div>
+          {" "}
+          {/* image */}
+          <div>
+            <img
+              src="/assets/images/interior_2.png"
+              className="text-white w-full h-full size-[32.75rem] relative md:pr-14 pt-5"
+            />
+            <FloatingWhatsApp
+              phoneNumber="+201032004400"
+              accountName=" IWAN Interiors"
+              avatar="/assets/images/logo.png"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
