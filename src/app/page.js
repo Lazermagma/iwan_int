@@ -81,11 +81,11 @@ export default function Home() {
         </a>
 
         <a
-          href="/assets/company_portfolio.pdf"
+          href="/assets/company_profile.pdf"
           download
           className="btn rounded-full p-6 content-center font-extrabold bg-[#FFD400] hover:bg-[#b39c29] "
         >
-          Company Portfolio <FileDownloadIcon />
+          Company Profile <FileDownloadIcon />
         </a>
       </div>
 
