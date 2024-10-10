@@ -103,7 +103,7 @@ export default function Home() {
               IWAN Interior Design House specializes in creating exceptional
               interiors, fit-outs, and decorative solutions. We blend creativity
               with functionality to transform spaces into elegant environments
-              that reflect our clients' vision and style.
+              that reflect our clients&apos; vision and style.
             </p>
           </div>
         </div>
